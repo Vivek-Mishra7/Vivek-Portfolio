@@ -1,0 +1,72 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+  body {
+    background-color: #FAFAF8;
+    color: #1A1D23;
+  }
+}
+
+/* Blueprint grid background */
+.blueprint-bg {
+  position: relative;
+}
+
+.blueprint-bg::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  z-index: 0;
+  background-size: 60px 60px;
+  background-image: 
+    linear-gradient(to right, rgba(228, 228, 225, 0.5) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(228, 228, 225, 0.5) 1px, transparent 1px);
+}
+
+.blueprint-bg::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  z-index: 0;
+  background-size: 15px 15px;
+  background-image: 
+    linear-gradient(to right, rgba(228, 228, 225, 0.2) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(228, 228, 225, 0.2) 1px, transparent 1px);
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+::-webkit-scrollbar-track {
+  background: #FAFAF8;
+}
+::-webkit-scrollbar-thumb {
+  background: #E4E4E1;
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #06B6D4;
+}
+
+/* Custom layout utility */
+.radial-fade-overlay {
+  background: radial-gradient(circle 600px at 50% 200px, rgba(6, 182, 212, 0.04), transparent 80%);
+}
+
+.radial-fade-coral {
+  background: radial-gradient(circle 500px at 50% 50%, rgba(251, 122, 92, 0.03), transparent 70%);
+}
+
+/* Timeline Custom Styles */
+.timeline-line {
+  background: linear-gradient(to bottom, #E4E4E1, #06B6D4 15%, #FB7A5C 85%, #E4E4E1);
+}
